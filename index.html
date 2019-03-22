@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.0/examples/cover/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+    <title>Cover Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/cover.css" rel="stylesheet">
+</head>
+
+<body onload = "CurrencyControllerModule.getCurrencies();" class="text-center">
+
+<div class="cover-container d-flex h-100 w-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">AREP</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active " href="./index.html">Home</a>
+                <a class="nav-link" href="./table.html">Table</a>
+                <a class="nav-link" href="">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main  class="h-100" role="main" style="margin-top:70px;">
+        
+        <h1 class="lead" >Convert Currency</h1>
+        
+        <div class="row mt-4 justify-content-center">
+            <div class="col-4 mb-4">
+                <input  id="amount1" type="text" class="form-control"  placeholder="Amount" value="0" required="" onchange="CurrencyControllerModule.updateCurrency();">
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+            </div>
+            <div class="col-6 mb-4">
+                <select id = "selectBox"  class="custom-select d-block w-100" required="" onchange="CurrencyControllerModule.updateCurrency();" >
+                    <option value="">Select Currency</option>
+                </select>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+                <input  id="amount2" type="text" class="form-control"  placeholder="Amount" value="0" required="" onchange="CurrencyControllerModule.updateCurrency('reversed');">
+                <div class="invalid-feedback">
+                    Valid first name is required.
+                </div>
+            </div>
+            <div  class="col-md-6 mb-4">
+                <select id = "selectBox2" class="custom-select d-block w-100"  required="" onchange="CurrencyControllerModule.updateCurrency();" >
+                    <option value="">Select Currency</option>
+                    
+                </select>
+            </div>
+        </div>
+   
+        <div class="row justify-content-center mb-4">
+            <a href = '#' onClick="CurrencyControllerModule.updateCurrency();" class="btn btn-lg btn-primary mr-4">Convert</a>
+
+        </div>
+        
+
+        
+        <!--p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p-->
+        <!--a href = '#' onClick = 'removeOrderById(1);' class="btn btn-lg btn-secondary">Remove Order </a>
+
+        <a href = '#' onClick = '' class="btn btn-lg btn-secondary">Add Order</a-->
+        
+
+
+    </main>
+
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+    </footer>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+<script src="./js/bootstrap.min.js.descarga"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src ="./js/CurrencyController.js"></script>
+<script src ="./js/CurrencyRestController.js"></script>
+
+
+
+</body></html>
